@@ -7,4 +7,11 @@
   <%= link_to "Back to users", users_path %>
 
   <%= button_to "Destroy this user", @user, method: :delete %>
+
+  <% @user_microposts.each do |micropost| %>
+    <%= render micropost %>
+    <p>
+      <%= link_to "Show this micropost", micropost %>
+    </p>
+  <% end %>
 </div>
